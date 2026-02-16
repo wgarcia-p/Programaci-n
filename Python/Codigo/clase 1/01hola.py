@@ -1,3 +1,5 @@
+# Este es un programa simple que muestra un mensaje de saludo en la consola
+
 print("Hola mundo")
 print("Bienvenidos a la clase de Python")
 print("Espero que disfruten aprendiendo Python")

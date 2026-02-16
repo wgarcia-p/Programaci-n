@@ -1,14 +1,10 @@
-import os
-
-def clrscr():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-clrscr()
-
-
+#variables en Python
 edad= 25
+#variable de tipo entero (int)
 nombre= "Juan"
+#variable de tipo cadena (str)
 altura= 1.75
+#variable de tipo flotante (float)
 print("Mi nombre es", nombre, "y tengo", edad, "años.")
 print("Mi altura es", altura, "metros.")
 # Puedes realizar operaciones con variables
