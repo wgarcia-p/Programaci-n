@@ -8,8 +8,10 @@ import os
 def clrscr():
     os.system('cls' if os.name == 'nt' else 'clear')
     #funcion para limpiar la consola, dependiendo del sistema operativo
+    #solo se escribe una vez y se llama cada vez que se quiera limpiar la consola
 
 clrscr()
 #limpiar la consola al iniciar el programa
+#llamada a la funcion clrscr() para limpiar la consola al iniciar el programa
 
 nombre = input("¿Cuál es tu nombre? ")
