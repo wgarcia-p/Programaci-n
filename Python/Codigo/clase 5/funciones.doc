@@ -1,0 +1,181 @@
+# 📘 GUÍA DIDÁCTICA
+
+# **Funciones en Python**
+
+Nivel: 15–16 años
+Duración estimada: 3 a 4 periodos de clase
+
+---
+
+# 🎯 1. Objetivo de Aprendizaje
+
+Al finalizar la unidad el estudiante:
+
+* Comprende qué es una función.
+* Define funciones usando `def`.
+* Utiliza parámetros y argumentos.
+* Aplica `return` correctamente.
+* Diferencia variables locales y globales.
+* Resuelve problemas simples usando funciones.
+
+---
+
+# 📌 2. Exploración Inicial (Activación de conocimientos)
+
+Pregunta generadora:
+
+> Si en un programa repites el mismo cálculo 10 veces… ¿existe una forma de escribirlo una sola vez?
+
+Ejemplo sin función:
+
+```python
+print(5 + 3)
+print(10 + 2)
+print(7 + 1)
+```
+
+Reflexión guiada:
+Estamos repitiendo lógica. Necesitamos una estructura reutilizable.
+
+---
+
+# 📖 3. Concepto
+
+Una **función** es un bloque de código reutilizable que realiza una tarea específica.
+
+Se define con:
+
+```python
+def nombre_funcion():
+    instrucciones
+```
+
+---
+
+# 🧪 4. Desarrollo por Etapas
+
+## ETAPA 1 – Función básica
+
+```python
+def mensaje():
+    print("Bienvenidos a programación")
+
+mensaje()
+```
+
+Actividad práctica:
+
+* Crear una función que imprima su nombre.
+* Crear una función que imprima el nombre del curso.
+
+---
+
+## ETAPA 2 – Funciones con parámetros
+
+```python
+def saludar(nombre):
+    print("Hola", nombre)
+
+saludar("Luis")
+```
+
+Actividad práctica:
+
+* Crear una función que reciba dos números y los imprima.
+* Crear una función que reciba edad y muestre un mensaje.
+
+---
+
+## ETAPA 3 – Funciones con retorno
+
+```python
+def sumar(a, b):
+    return a + b
+
+resultado = sumar(4, 6)
+print(resultado)
+```
+
+Explicación clave:
+
+* `print()` muestra.
+* `return` devuelve el valor.
+
+Actividad práctica:
+
+* Crear función que calcule el área de un rectángulo.
+* Crear función que calcule promedio de 3 notas.
+
+---
+
+## ETAPA 4 – Variables locales y globales
+
+```python
+x = 10
+
+def ejemplo():
+    y = 5
+    print(x)
+```
+
+Explicar:
+
+* Variable local → vive dentro de la función.
+* Variable global → vive fuera.
+
+Ejercicio:
+
+* Intentar imprimir una variable local fuera de la función.
+* Analizar el error.
+
+---
+
+# 🧩 5. Actividad Integradora
+
+Proyecto corto:
+
+Crear un programa que tenga:
+
+1. Una función para sumar.
+2. Una función para restar.
+3. Una función para multiplicar.
+4. Una función para dividir.
+5. Un menú usando `while`.
+
+Objetivo: Integrar ciclos + funciones.
+
+---
+
+# 📝 6. Evaluación (Formativa)
+
+Criterios:
+
+✔ Define correctamente una función
+✔ Usa parámetros adecuadamente
+✔ Utiliza `return` cuando es necesario
+✔ Organiza el código correctamente
+✔ Ejecuta el programa sin errores
+
+Valor sugerido: 25 puntos
+
+---
+
+# 🏠 7. Tarea para Cuaderno (A Mano)
+
+1. Escribir la definición de función.
+2. Dibujar el esquema:
+   Entrada → Proceso → Salida.
+3. Redactar 3 ejemplos de funciones.
+4. Escribir un programa que calcule el área de un triángulo usando función.
+
+---
+
+# 📌 8. Error común a prevenir
+
+❌ Confundir `print()` con `return`.
+❌ No llamar la función después de definirla.
+❌ Usar variables locales fuera de la función.
+
+---
+
+
