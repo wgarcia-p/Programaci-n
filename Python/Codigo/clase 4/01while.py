@@ -12,3 +12,4 @@ while contador <= 10:
     print(f"{numero} x {contador} = {resultado}")
     # se incrementa el contador en 1 para avanzar a la siguiente multiplicación en la tabla de multiplicar
     contador += 1
+    
