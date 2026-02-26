@@ -1,0 +1,45 @@
+🧠 Actividad en clase
+Ejercicio 1
+
+Crear una lista llamada empleados con 5 nombres.
+Mostrar:
+
+El primero
+
+El último
+
+La cantidad total de empleados
+
+Ejercicio 2 (Aplicación real)
+
+Una empresa registra facturas del día:
+
+Crear lista vacía facturas
+
+Agregar 4 números de factura
+
+Mostrar todas
+
+Mostrar cuántas facturas se emitieron
+
+📌 Tarea
+
+Redactar un programa que:
+
+Cree una lista vacía llamada compras.
+
+Permita agregar 5 productos.
+
+Muestre la lista completa.
+
+Muestre la cantidad de productos comprados.
+
+🔎 Cierre conceptual
+
+Una lista es útil cuando:
+
+Se necesita almacenar múltiples datos relacionados.
+
+No se conoce exactamente cuántos datos habrá.
+
+Se requiere recorrer información repetitiva (ventas, notas, facturas, clientes).

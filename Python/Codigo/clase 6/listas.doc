@@ -1,0 +1,87 @@
+📘 CLASE: LISTAS EN PYTHON
+🎯 Objetivos de la clase
+
+Al finalizar, el estudiante podrá:
+
+Crear listas.
+
+Acceder a elementos por índice.
+
+Modificar elementos.
+
+Agregar y eliminar datos.
+
+Recorrer listas con for.
+
+Aplicar listas en un caso práctico empresarial básico.
+
+1️⃣ ¿Qué es una lista?
+
+Una lista es una estructura de datos que permite almacenar varios valores en una sola variable.
+
+Se escribe con corchetes [].
+
+productos = ["Laptop", "Mouse", "Teclado"]
+
+Aquí tenemos 3 elementos dentro de la lista.
+
+2️⃣ Índices (posición de los elementos)
+
+Las listas empiezan en posición 0, no en 1.
+
+Elemento	Índice
+Laptop	0
+Mouse	1
+Teclado	2
+
+Acceder a un elemento:
+
+print(productos[0])
+
+Salida:
+
+Laptop
+3️⃣ Modificar un elemento
+productos[1] = "Mouse Gamer"
+print(productos)
+4️⃣ Agregar elementos
+➤ append() (agrega al final)
+productos.append("Monitor")
+➤ insert() (agrega en posición específica)
+productos.insert(1, "Impresora")
+5️⃣ Eliminar elementos
+➤ remove() (por nombre)
+productos.remove("Teclado")
+➤ pop() (por posición)
+productos.pop(0)
+6️⃣ Recorrer una lista (for)
+for producto in productos:
+    print(producto)
+7️⃣ Funciones útiles
+len(productos)      # Cantidad de elementos
+productos.sort()    # Ordenar
+productos.reverse() # Invertir orden
+🏢 Ejemplo práctico empresarial
+Caso: Control básico de ventas en una tienda
+
+Una tienda necesita registrar los productos vendidos en el día.
+
+ventas = []
+
+ventas.append("Laptop")
+ventas.append("Mouse")
+ventas.append("Laptop")
+
+print("Productos vendidos hoy:")
+for producto in ventas:
+    print(producto)
+
+print("Total de ventas realizadas:", len(ventas))
+
+Salida esperada:
+
+Productos vendidos hoy:
+Laptop
+Mouse
+Laptop
+Total de ventas realizadas: 3
