@@ -17,7 +17,15 @@ def mostrar_clientes(clientes):
     input("Presione enter para continuar")
 
 def renombrar_cliente(clientes):
-    print("Renombrar")
+    buscar = input("Ingrese el nombre del cliente a renombrar:")
+    for cliente in clientes:
+        if cliente == buscar:
+            nuevo_nombre = input("Ingrese el nuevo nombre del cliente:")
+            clientes[clientes.index(cliente)] = nuevo_nombre
+            print("Cliente renombrado exitosamente")
+            break
+    else:
+        print("El cliente no se encuentra registrado")
     input("Presione enter para continuar...")
 
 def buscar_cliente(clientes):
