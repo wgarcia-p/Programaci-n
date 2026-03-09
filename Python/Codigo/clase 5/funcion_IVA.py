@@ -16,7 +16,8 @@ def main():
     while True:
         precio_producto = float(input("Ingrese el precio del producto: "))
         iva_producto = calcular_iva(precio_producto)
-        print(f"El IVA del producto es: {iva_producto :.2f}") #:.2f muestra el resultado con 2 decimales
+        print(f"El IVA del producto es: {iva_producto :.2f}") #:.2f muestra el 
+        #resultado con 2 decimales
 
 if __name__ == "__main__":
     main()

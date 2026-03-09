@@ -1,7 +1,11 @@
+'''
 #genera una lista
+'''
+
 
 productos = ["manzana", "banana", "naranja", "pera"]
 
+'''
 print(productos)
 
 #accede a un elemento de la lista por su indice
@@ -19,7 +23,8 @@ print(productos[2]) #papaya
 productos.append("uva")
 print(productos)
 
-#agrega en una posicion especifica (indice 1 y el resto se corre hacia la derecha)
+#agrega en una posicion especifica 
+# (indice 1 y el resto se corre hacia la derecha)
 productos.insert(1, "fresa")
 print(productos)
 
@@ -30,10 +35,14 @@ del productos[3] #elimina la pera
 productos.remove("fresa")
 print(productos)
 
+'''
+'''
 #recorre una lista con un ciclo for
 for producto in productos:
     print(producto)
- 
+
+print(productos)
+ '''
 
 
 
