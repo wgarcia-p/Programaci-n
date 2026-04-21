@@ -1,5 +1,4 @@
-
-
+from datetime import datetime
 
 lista_clientes= []
 
@@ -74,19 +73,27 @@ def agregar_cliente(codigo,nombre,telefono,direccion,correo,saldo):
 
 
 def mostrar_clientes():
+    ahora = datetime.now()
+    with open("C:/Users/Willy/Documents/Repositorios/Programaci-n/Python/Codigo/sistema_bancario/recibos/clientes.txt", "w") as archivo:
+          archivo.write(" ")
     for cliente in lista_clientes:
         print(f"Nombre: {cliente['nombre']}, Codigo: {cliente['codigo']}, Telefono: {cliente['telefono']}, Saldo: {cliente['saldo']}")
     impresion = input("Desea imprimir el listado de clientes S/N?")
     if impresion.upper() == "S":
-        for cliente in lista_clientes:
-            print("============ REGISTRO ====================")
-            print(f"Nombre: {cliente['nombre']}, Codigo: {cliente['codigo']}, Telefono: {cliente['telefono']}, Saldo: {cliente['saldo']}")
-            print("==========================================")
-        input("Impresion finalizada, presione enter para continuar ")
+          for cliente in lista_clientes:
+            texto =(
+            "============ REGISTRO ====================\n"
+            f"Nombre: {cliente['nombre']}, Codigo: {cliente['codigo']}, Telefono: {cliente['telefono']}, Saldo: {cliente['saldo']}\n"
+            f"Fecha de impresión: {ahora}\n"
+            "==========================================\n"
+            )
+#C:\Users\Willy\Documents\Repositorios\Programaci-n\Python\Codigo\sistema_bancario\recibos
+            with open("C:/Users/Willy/Documents/Repositorios/Programaci-n/Python/Codigo/sistema_bancario/recibos/clientes.txt", "a") as archivo:
+                  archivo.write(f"{texto}\n")
+          input("Impresion exitosa, presione enter para continuar")
     else:
-        print("Regresando al menu principal...")
-        input("Presione enter para continuar")
-      
+        print("Regresando al menu principal...")    
+     
         
 
 def depositos(codigo_cliente):
@@ -192,5 +199,3 @@ while True:
                 print("Gracias por usar el sistema del banco LMG")
                 input("Presione enter para salir")
                 break
-        case _:
-            print("Opción no válida")
