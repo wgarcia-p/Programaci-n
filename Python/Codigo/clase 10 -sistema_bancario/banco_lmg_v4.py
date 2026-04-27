@@ -154,46 +154,51 @@ def consulta(codigo_cliente):
             input("Presione enter para continuar")                     
 
 while True:
-    codigo = codigo+5
-    print("BIENVENIDO AL BANCO LMG")
-    print("1. REGISTRAR UN NUEVO CUENTAHABIENTE")
-    print("2. Mostrar el listado de cuentas")
-    print("3. Realizar un deposito")
-    print("4. Realizar un retiro")
-    print("5. Consultar estado de cuenta")
-    print("6. Salir")
-    seleccion = int(input("Seleccione una opcion\n"))
-    
-    
-    match seleccion:
-        case 1:
-                codigo_cliente = codigo
-                nombre_cliente=input("Ingrese el nombre del cliente\n")
-                telefono_cliente = input("Ingrese el numero de telefono del cliente\n")
-                direccion_cliente = input("Ingrese la direccion del cliente\n")
-                correo_cliente = input("Ingrese el email del cliente\n")
-                saldo = float(input("Ingrese monto de apertura\n"))
-                agregar_cliente(codigo_cliente,nombre_cliente,telefono_cliente,direccion_cliente,correo_cliente,saldo)
-        case 2:
-                if not lista_clientes:
-                      print("No hay clientes registrados")
-                else:
-                        mostrar_clientes()
-        case 3:
-                print("Depositos a cuentas")
-                cuenta_deposito = int(input("Ingrese la cuenta a acreditar\n"))
-                depositos(cuenta_deposito)        
-        case 4:
-                print("Retiros de cuentas")
-                cuenta_retiro = int(input("Ingrese la cuenta a debitar\n"))
-                retiros(cuenta_retiro)
-        case 5:
-                print("Consulta de estado de cuenta")
-                cuenta_consulta = int(input("Ingrese la cuenta a consultar\n"))
-                consulta(cuenta_consulta)
-        case 6:
-                print("Gracias por usar el sistema del banco LMG")
-                input("Presione enter para salir")
-                break
-        case _:
-                print("Opción no válida")
+    try:
+      codigo = codigo+5
+      print("BIENVENIDO AL BANCO LMG")
+      print("1. REGISTRAR UN NUEVO CUENTAHABIENTE")
+      print("2. Mostrar el listado de cuentas")
+      print("3. Realizar un deposito")
+      print("4. Realizar un retiro")
+      print("5. Consultar estado de cuenta")
+      print("6. Salir")
+      seleccion = int(input("Seleccione una opcion\n"))
+      
+      
+      match seleccion:
+            case 1:
+                  codigo_cliente = codigo
+                  nombre_cliente=input("Ingrese el nombre del cliente\n")
+                  telefono_cliente = input("Ingrese el numero de telefono del cliente\n")
+                  direccion_cliente = input("Ingrese la direccion del cliente\n")
+                  correo_cliente = input("Ingrese el email del cliente\n")
+                  saldo = float(input("Ingrese monto de apertura\n"))
+                  agregar_cliente(codigo_cliente,nombre_cliente,telefono_cliente,direccion_cliente,correo_cliente,saldo)
+            case 2:
+                  if not lista_clientes:
+                        print("No hay clientes registrados")
+                  else:
+                              mostrar_clientes()
+            case 3:
+                  print("Depositos a cuentas")
+                  cuenta_deposito = int(input("Ingrese la cuenta a acreditar\n"))
+                  depositos(cuenta_deposito)        
+            case 4:
+                  print("Retiros de cuentas")
+                  cuenta_retiro = int(input("Ingrese la cuenta a debitar\n"))
+                  retiros(cuenta_retiro)
+            case 5:
+                  print("Consulta de estado de cuenta")
+                  cuenta_consulta = int(input("Ingrese la cuenta a consultar\n"))
+                  consulta(cuenta_consulta)
+            case 6:
+                  print("Gracias por usar el sistema del banco LMG")
+                  input("Presione enter para salir")
+                  break
+            case _:
+                  print("Opción no válida")
+
+    except:
+         print("Ingrese un numero o una opción válida")
+         input()
