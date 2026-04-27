@@ -68,6 +68,7 @@ def agregar_cliente(codigo,nombre,telefono,direccion,correo,saldo):
 
 
 def mostrar_clientes():
+    
     ahora = datetime.now()
     with open(ruta_recibos, "w") as archivo:
           archivo.write(" ")
@@ -89,9 +90,6 @@ def mostrar_clientes():
           input("Impresion exitosa, presione enter para continuar")
     else:
         print("Regresando al menu principal...")    
-     
-        
-
 def depositos(codigo_cliente):
     print("DEPOSITOS A CUENTAS")
     cuenta_deposito = codigo_cliente
@@ -133,22 +131,27 @@ def retiros(codigo_cliente):
                   input("Presione enter para continuar")
 
 def consulta(codigo_cliente):
+      ahora = datetime.now().strftime("%d-%m-%Y HH %H-%M-%S")
       print("Consulta de estado de cuenta")
       cuenta_consulta = codigo_cliente
       for clientes in lista_clientes:
             if clientes["codigo"] == cuenta_consulta:
-                  print("==========================================")
-                  print(f"Nombre: {clientes['nombre']}, Codigo: {clientes['codigo']}, Telefono: {clientes['telefono']}, Saldo: {clientes['saldo']}")
-                  print("==========================================")
+                  texto=(
+                  "============ ESTADO DE CUENTA ====================\n"
+                  f"| Nombre: {clientes['nombre']},\n| Codigo: {clientes['codigo']},\n| Telefono: {clientes['telefono']},\n| Saldo: {clientes['saldo']}\n"
+                  "==========================================\n"
+                  )
+                  with open(f"C:/Users/Willy/Documents/Repositorios/Programaci-n/Python/Codigo/sistema_bancario/estados de cuenta/{clientes['codigo']}-{ahora}.txt", "a") as archivo:
+                        archivo.write(f"{texto}\n")
+                  print("El estado de cuenta se ha impreso exitosamente!")
                   input("Presione enter para continuar")
                   break
+                  
+
+
       else:
             print("Cuenta no encontrada")
-            input("Presione enter para continuar")                 
-                
-                  
-            
-
+            input("Presione enter para continuar")                     
 
 while True:
     codigo = codigo+5
@@ -171,7 +174,6 @@ while True:
                 correo_cliente = input("Ingrese el email del cliente\n")
                 saldo = float(input("Ingrese monto de apertura\n"))
                 agregar_cliente(codigo_cliente,nombre_cliente,telefono_cliente,direccion_cliente,correo_cliente,saldo)
-
         case 2:
                 if not lista_clientes:
                       print("No hay clientes registrados")
@@ -180,13 +182,11 @@ while True:
         case 3:
                 print("Depositos a cuentas")
                 cuenta_deposito = int(input("Ingrese la cuenta a acreditar\n"))
-                depositos(cuenta_deposito)
-        
+                depositos(cuenta_deposito)        
         case 4:
                 print("Retiros de cuentas")
                 cuenta_retiro = int(input("Ingrese la cuenta a debitar\n"))
                 retiros(cuenta_retiro)
-
         case 5:
                 print("Consulta de estado de cuenta")
                 cuenta_consulta = int(input("Ingrese la cuenta a consultar\n"))
@@ -195,3 +195,5 @@ while True:
                 print("Gracias por usar el sistema del banco LMG")
                 input("Presione enter para salir")
                 break
+        case _:
+                print("Opción no válida")

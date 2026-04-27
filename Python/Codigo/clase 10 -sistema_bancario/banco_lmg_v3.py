@@ -199,3 +199,5 @@ while True:
                 print("Gracias por usar el sistema del banco LMG")
                 input("Presione enter para salir")
                 break
+        case _:
+                print("Opción no válida")

@@ -1,8 +1,0 @@
-Nombre: Laptop
-Precio: Q750
-Stock: 5
-------------------------
-Nombre: Mouse
-Precio: Q25
-Stock: 20
-------------------------
