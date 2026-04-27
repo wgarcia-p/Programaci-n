@@ -1,8 +1,8 @@
 from datetime import datetime
 
 lista_clientes= []
-ruta_recibos = "C:/Users/Willy/Documents/Repositorios/Programaci-n/Python/Codigo/sistema_bancario/recibos/clientes.txt"
-
+ruta_recibos = "C:/Users/Willy/Documents/Repositorios/Programaci-n/Python/Codigo/clase 10 -sistema_bancario/recibos/clientes.txt"
+# C:\Users\Willy\Documents\Repositorios\Programaci-n\Python\Codigo\clase 10 -sistema_bancario\recibos
 def insertar_clientes():
 
       cliente1 = {
@@ -68,7 +68,6 @@ def agregar_cliente(codigo,nombre,telefono,direccion,correo,saldo):
 
 
 def mostrar_clientes():
-    
     ahora = datetime.now()
     with open(ruta_recibos, "w") as archivo:
           archivo.write(" ")
@@ -90,6 +89,7 @@ def mostrar_clientes():
           input("Impresion exitosa, presione enter para continuar")
     else:
         print("Regresando al menu principal...")    
+
 def depositos(codigo_cliente):
     print("DEPOSITOS A CUENTAS")
     cuenta_deposito = codigo_cliente
@@ -131,7 +131,7 @@ def retiros(codigo_cliente):
                   input("Presione enter para continuar")
 
 def consulta(codigo_cliente):
-      ahora = datetime.now().strftime("%d-%m-%Y HH %H-%M-%S")
+      ahora = datetime.now().strftime("%d-%m-%Y HH %H-%M-%S") #cambiar formato de fecha
       print("Consulta de estado de cuenta")
       cuenta_consulta = codigo_cliente
       for clientes in lista_clientes:
@@ -141,7 +141,7 @@ def consulta(codigo_cliente):
                   f"| Nombre: {clientes['nombre']},\n| Codigo: {clientes['codigo']},\n| Telefono: {clientes['telefono']},\n| Saldo: {clientes['saldo']}\n"
                   "==========================================\n"
                   )
-                  with open(f"C:/Users/Willy/Documents/Repositorios/Programaci-n/Python/Codigo/sistema_bancario/estados de cuenta/{clientes['codigo']}-{ahora}.txt", "a") as archivo:
+                  with open(f"C:/Users/Willy/Documents/Repositorios/Programaci-n/Python/Codigo/clase 10 -sistema_bancario/estados de cuenta/{clientes['codigo']}-{ahora}.txt", "a") as archivo:
                         archivo.write(f"{texto}\n")
                   print("El estado de cuenta se ha impreso exitosamente!")
                   input("Presione enter para continuar")
