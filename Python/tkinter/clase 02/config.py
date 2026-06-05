@@ -6,7 +6,7 @@ ventana.geometry("300x200")
 mensaje = tk.Label(
     ventana, text="Texto original"
 )
-mensaje.pack()
+mensaje.pack() 
 
 mensaje.config(
     text="Texto nuevo"
